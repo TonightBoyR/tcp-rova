@@ -31,7 +31,7 @@ net.ipv4.ip_local_port_range = 10000 65535
 net.ipv4.tcp_max_orphans = 262144
 
 # Keepalive tuning
-net.ipv4.tcp_keepalive_time = 60
+net.ipv4.tcp_keepalive_time = 30
 net.ipv4.tcp_keepalive_intvl = 10
 net.ipv4.tcp_keepalive_probes = 6
 
