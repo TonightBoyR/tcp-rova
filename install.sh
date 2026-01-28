@@ -22,7 +22,7 @@ function apply_settings() {
     cat <<EOF > $SYSCTL_FILE
 # TIME_WAIT tuning
 net.ipv4.tcp_tw_reuse = 1
-net.ipv4.tcp_fin_timeout = 10
+net.ipv4.tcp_fin_timeout = 30
 
 # Port exhaustion prevention
 net.ipv4.ip_local_port_range = 10000 65535
@@ -31,9 +31,9 @@ net.ipv4.ip_local_port_range = 10000 65535
 net.ipv4.tcp_max_orphans = 262144
 
 # Keepalive tuning
-net.ipv4.tcp_keepalive_time = 30
-net.ipv4.tcp_keepalive_intvl = 10
-net.ipv4.tcp_keepalive_probes = 6
+net.ipv4.tcp_keepalive_time = 120
+net.ipv4.tcp_keepalive_intvl = 20
+net.ipv4.tcp_keepalive_probes = 5
 
 # SYN flood & backlog
 net.core.netdev_max_backlog = 16384
